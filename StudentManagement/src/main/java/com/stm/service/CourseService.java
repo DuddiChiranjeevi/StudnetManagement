@@ -34,6 +34,9 @@ public class CourseService {
 		return courseDto;
 	}
 
+	public void deleteById(int courseId) {
+		courseRepository.deleteById(courseId);
+	}
 	public Optional<Course> serchByStudentId(int studentId) {
 		Optional<Course> course = courseRepository.findById(studentId);
 		return course;
