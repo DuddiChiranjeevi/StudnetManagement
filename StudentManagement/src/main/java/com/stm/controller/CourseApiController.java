@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -60,6 +61,10 @@ public class CourseApiController {
 		String headerValue = "attachment; filename=course.xls";	
 		response.addHeader(headerKey, headerValue);
 		courseService.exportToExcel(response);
+	}
+	@DeleteMapping("delete/{courseId}")
+	public void deleteById(@PathVariable("courseId") int courseId) {
+		courseService.deleteById(courseId);
 	}
 	
 }
