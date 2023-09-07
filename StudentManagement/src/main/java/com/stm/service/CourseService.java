@@ -37,10 +37,10 @@ public class CourseService {
 	public void deleteById(int courseId) {
 		courseRepository.deleteById(courseId);
 	}
-	public Optional<Course> serchByStudentId(int studentId) {
-		Optional<Course> course = courseRepository.findById(studentId);
-		return course;
-	}
+//	public Optional<Course> serchByStudentId(int studentId) {
+//		Optional<Course> course = courseRepository.findById(studentId);
+//		return course;
+//	}
 
 	public CourseDto saveCourse(Course course) {
 		Course data = courseRepository.save(course);

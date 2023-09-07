@@ -30,11 +30,11 @@ public class CourseApiController {
 	public CourseDto serchById( @PathVariable("courseId") int courseId) {
 		return courseService.serchById(courseId);
 	}
-	
-	  @GetMapping(value="/studentId/{studentId}")
-	  public Optional<Course> serchByStudentId( @PathVariable("studentId") int studentId) { 
-		  return courseService.serchByStudentId(studentId);
-	  }
+//	
+//	  @GetMapping(value="/studentId/{studentId}")
+//	  public Optional<Course> serchByStudentId( @PathVariable("studentId") int studentId) { 
+//		  return courseService.serchByStudentId(studentId);
+//	  }
 	@PostMapping("/save")
 	public CourseDto saveCourse(@RequestBody Course course) {
 		return courseService.saveCourse(course);
