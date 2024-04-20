@@ -16,7 +16,7 @@ public class CourseDto {
 	private double fee;
 	private String faculty;
 	private LocalDate courseStartedDate;
-	private int studentId;
+//	private int studentId;
 //	private String studentName;
 //	private String fatherName;
 //	private String motherName;
