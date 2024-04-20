@@ -31,6 +31,7 @@ public class CourseService {
 		Course course = courseRepository.findById(courseId).get();
 		CourseDto courseDto = new CourseDto();
 		BeanUtils.copyProperties(course, courseDto);
+		System.out.println(courseDto);
 		return courseDto;
 	}
 
