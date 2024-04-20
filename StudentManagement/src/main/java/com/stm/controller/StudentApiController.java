@@ -66,6 +66,7 @@ public class StudentApiController {
 
 	@GetMapping("/find/{studentId}")
 	public Student getById(@PathVariable("studentId") int stundentId) {
+		System.out.println("Student Id :"+ stundentId);
 		return studentService.getById(stundentId);
 
 	}
